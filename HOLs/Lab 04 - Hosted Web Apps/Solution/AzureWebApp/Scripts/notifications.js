@@ -58,7 +58,7 @@
 
         title = 'Alert'
         message = "Hello from your hosted web app"
-        imgUrl = 'http://images.itechpost.com/data/images/full/2094/windows-phone-8.jpg';
+        imgUrl = 'http://assets.onestore.ms/cdnfiles/onestorerolling-1509-27004/shell/v2_5/images/logo/icon-windows-logo.png';
         imgAlt = 'this is image alt'
         tag = 'tag'
 

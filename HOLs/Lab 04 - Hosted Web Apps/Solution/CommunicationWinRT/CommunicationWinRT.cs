@@ -11,11 +11,6 @@ namespace CommunicationWinRT
     [Windows.Foundation.Metadata.AllowForWeb]
     public sealed class CommunicationWinRT
     {
-        public CommunicationWinRT()
-        {
-
-        }
-
         public async void toastMessage(String message, int delay)
         {
             ToastTemplateType toastTemplate = ToastTemplateType.ToastText01;
