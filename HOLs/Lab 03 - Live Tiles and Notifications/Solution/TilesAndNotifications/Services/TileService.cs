@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TilesAndNotifications.Models;
+using TilesAndNotifications.Library;
 using System.Xml.Linq;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;

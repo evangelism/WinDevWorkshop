@@ -1,10 +1,12 @@
-﻿using System;
+﻿using BackgroundTasks;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -30,6 +32,7 @@ namespace TilesAndNotifications
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            RegisterBgTask("ToastUpdateTask", typeof(ToastUpdateTask));
         }
 
         /// <summary>
@@ -100,6 +103,30 @@ namespace TilesAndNotifications
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+        private async void RegisterBgTask(string taskName, Type taskType, bool isInternetRequired = false)
+        {
+            var backgroundAccessStatus = await BackgroundExecutionManager.RequestAccessAsync();
+
+            if (backgroundAccessStatus == BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity ||
+                backgroundAccessStatus == BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity)
+            {
+                // Check to see if the task has already been registered
+                if (BackgroundTaskRegistration.AllTasks.Any(t => t.Value.Name == taskName))
+                {
+                    return;
+                }
+
+                // Register the toast update task
+                var taskBuilder = new BackgroundTaskBuilder
+                {
+                    Name = taskName,
+                    TaskEntryPoint = taskType.FullName
+                };
+
+                taskBuilder.SetTrigger(new ToastNotificationActionTrigger());
+                var registration = taskBuilder.Register();
+            }
         }
     }
 }
