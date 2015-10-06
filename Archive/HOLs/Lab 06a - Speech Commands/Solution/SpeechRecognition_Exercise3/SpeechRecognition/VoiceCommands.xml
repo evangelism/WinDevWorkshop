@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="HoLCommandSet_en-us">
+    <CommandPrefix> Hands on Labs, </CommandPrefix>
+    <Example> Launch </Example>
+
+    <Command Name="LaunchApp">
+      <Example>launch</Example>
+      <ListenFor>launch</ListenFor>
+      <Feedback>Opening your speech recognition app</Feedback>
+      <Navigate />
+    </Command>
+
+    <Command Name="SayHello">
+      <Example>say hello</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">How's it going</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Say hello</ListenFor>
+      <Feedback>Hold on, let me ask</Feedback>
+      <VoiceCommandService Target="HolVoiceCommandService" />
+    </Command>
+
+    <Command Name="TurnRed">
+      <Example>turn red</Example>
+      <ListenFor>turn red</ListenFor>
+      <Feedback>My favorite color is red</Feedback>
+      <Navigate />
+    </Command>
+
+  </CommandSet>
+</VoiceCommands>
