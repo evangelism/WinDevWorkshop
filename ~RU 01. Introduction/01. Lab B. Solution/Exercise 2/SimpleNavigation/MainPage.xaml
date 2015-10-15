@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="SimpleNavigation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleNavigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" HorizontalAlignment="Left" Margin="12">
+            <TextBlock Text="Page Navigation" FontWeight="Light" FontSize="24" />
+            <TextBox x:Name="Message" Header="Enter a parameter to send to Page 2" Width="300" Margin="0,12,0,0" />
+            <Button Content="Go to Page 2" Click="Button_Click" Margin="0,12,0,0" />
+        </StackPanel>
+        
+        <Button Grid.Column="1" Style="{StaticResource NavigationBackButtonNormalStyle}" Click="GoForward" Visibility="{x:Bind CanGoForward}" VerticalAlignment="Top" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="180" />
+            </Button.RenderTransform>
+        </Button>
+        
+    </Grid>
+</Page>

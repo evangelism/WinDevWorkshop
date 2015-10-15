@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Handwriting.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Handwriting"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Text="Available Recognizers:" Margin="0,8"/>
+                <ComboBox
+                            x:Name="RecoName"
+                            MaxWidth="500"
+                            SelectionChanged="OnRecognizerChanged">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button x:Name="RecognizeBtn" Content="Recognize" Width="100" Margin="0,0,3,0" Click="OnRecognizeAsync"/>
+                <Button x:Name="ClearBtn" Content="Clear" Width="65" Margin="0,0,3,0" Click="OnClear"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Background="White" Grid.ColumnSpan="2">
+            <InkCanvas x:Name="InkCanvas" />
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="12">
+            <Button Content="Clear" Click="OnClear" />
+            <TextBlock x:Name="Status" Margin="20,0,0,0" />
+        </StackPanel>
+    </Grid>
+</Page>

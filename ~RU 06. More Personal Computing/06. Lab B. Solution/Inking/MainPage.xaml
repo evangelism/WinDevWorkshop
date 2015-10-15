@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Inking.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Inking"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:inkTools="using:Microsoft.Labs.InkToolbarControl"
+    mc:Ignorable="d">
+
+    <Grid Background="LightGray">
+        <Grid.Resources>
+            <Style x:Key="ColorButtonStyle"  TargetType="Button">
+                <Setter Property="MinWidth" Value="28"/>
+                <Setter Property="MinHeight" Value="28"/>
+                <Setter Property="Width" Value="28"/>
+                <Setter Property="Height" Value="28"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
+                <Setter Property="FontSize" Value="0"/>
+                <Setter Property="Padding" Value="0,0,0,0"/>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Text="Color" Margin="0,0,12,0" VerticalAlignment="Center" />
+                <Button Background="Crimson"    Foreground="Crimson"    Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+                <Button Background="Orange"  Foreground="Orange"  Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+                <Button Background="Gold"   Foreground="Gold"   Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+                <Button Background="LimeGreen" Foreground="LimeGreen" Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+                <Button Background="DeepSkyBlue" Foreground="DeepSkyBlue" Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+                <Button Background="MediumOrchid" Foreground="MediumOrchid" Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+                <Button Background="Black" Foreground="Black" Click="OnPenColorChanged" Style="{StaticResource ColorButtonStyle}" Margin="0,0,3,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                <CheckBox Content="Enable Erasing Mode" Margin="20,0,4,0" Checked="ErasingModeCheckBox_Checked" Unchecked="ErasingModeCheckBox_Unchecked"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Background="White" Grid.ColumnSpan="2">
+            <InkCanvas x:Name="InkCanvas" />
+            <inkTools:InkToolbar TargetInkCanvas="{x:Bind InkCanvas}" PenColor="SlateBlue" VerticalAlignment="Top" HorizontalAlignment="Right"></inkTools:InkToolbar>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="12">
+            <Button Content="Clear" Click="OnClear" />
+            <Button Content="Load" Margin="12,0,12,0" />
+            <Button Content="Save" />
+        </StackPanel>
+    </Grid>
+</Page>
