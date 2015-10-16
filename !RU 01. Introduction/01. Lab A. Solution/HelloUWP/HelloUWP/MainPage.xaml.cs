@@ -35,12 +35,6 @@ namespace HelloUWP
         {
             this.InitializeComponent();
             this.SizeChanged += MainPage_SizeChanged;
-            this.Loaded += MainPage_Loaded;
-        }
-
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
