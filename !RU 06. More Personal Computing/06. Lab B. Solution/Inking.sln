@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inking", "Inking\Inking.csproj", "{B189B8FC-4FDF-417B-9840-51B1F0E35343}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handwriting", "Handwriting\Handwriting.csproj", "{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|ARM.Build.0 = Debug|ARM
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|ARM.Deploy.0 = Debug|ARM
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|x64.ActiveCfg = Debug|x64
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|x64.Build.0 = Debug|x64
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|x64.Deploy.0 = Debug|x64
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|x86.ActiveCfg = Debug|x86
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|x86.Build.0 = Debug|x86
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Debug|x86.Deploy.0 = Debug|x86
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|ARM.ActiveCfg = Release|ARM
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|ARM.Build.0 = Release|ARM
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|ARM.Deploy.0 = Release|ARM
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|x64.ActiveCfg = Release|x64
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|x64.Build.0 = Release|x64
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|x64.Deploy.0 = Release|x64
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|x86.ActiveCfg = Release|x86
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|x86.Build.0 = Release|x86
+		{B189B8FC-4FDF-417B-9840-51B1F0E35343}.Release|x86.Deploy.0 = Release|x86
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|ARM.ActiveCfg = Debug|ARM
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|ARM.Build.0 = Debug|ARM
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|ARM.Deploy.0 = Debug|ARM
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|x64.ActiveCfg = Debug|x64
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|x64.Build.0 = Debug|x64
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|x64.Deploy.0 = Debug|x64
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|x86.ActiveCfg = Debug|x86
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|x86.Build.0 = Debug|x86
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Debug|x86.Deploy.0 = Debug|x86
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|ARM.ActiveCfg = Release|ARM
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|ARM.Build.0 = Release|ARM
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|ARM.Deploy.0 = Release|ARM
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|x64.ActiveCfg = Release|x64
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|x64.Build.0 = Release|x64
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|x64.Deploy.0 = Release|x64
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|x86.ActiveCfg = Release|x86
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|x86.Build.0 = Release|x86
+		{9A2E8F00-B1B8-4E90-A66A-1ADA019DBF89}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

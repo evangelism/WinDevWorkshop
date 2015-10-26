@@ -1,0 +1,45 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloBlend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:SampleData="using:Blend.SampleData.SampleDataSource"
+    x:Class="HelloBlend.MainPage"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <SampleData:SampleDataSource x:Key="SampleDataSource" d:IsDataSource="True"/>
+        <DataTemplate x:Key="ItemTemplate">
+            <Grid HorizontalAlignment="Left" Width="250" Height="250"  >
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                    <Image Source="{Binding Property3}" Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                    <TextBlock Text="{Binding Property1}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextBlockStyle}" Height="60" TextWrapping="NoWrap" Margin="15,0,15,0"/>
+                    <TextBlock Text="{Binding Property2}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Key="ItemsGroupedByGroup" Source="{Binding Groups, Source={StaticResource SampleDataSource}}"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot ItemsSource="{Binding Source={StaticResource ItemsGroupedByGroup}}" Title="SampleDataSource">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="1,0,0,6" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Property1}" Margin="3,-7,10,10" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <Pivot.ItemTemplate>
+                <DataTemplate>
+                    <ListView ItemTemplate="{StaticResource ItemTemplate}" ItemsSource="{Binding Items}"/>
+                </DataTemplate>
+            </Pivot.ItemTemplate>
+        </Pivot>
+    </Grid>
+</Page>
