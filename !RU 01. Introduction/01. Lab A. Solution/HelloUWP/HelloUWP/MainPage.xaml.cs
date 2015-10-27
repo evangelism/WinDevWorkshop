@@ -13,23 +13,24 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// Документацию по шаблону элемента "Пустая страница" см. по адресу http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace HelloUWP
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
-        public string DeviceFamily = "Device Family: " + AnalyticsInfo.VersionInfo.DeviceFamily;
-        public event PropertyChangedEventHandler PropertyChanged;
-        public string Dimensions { get; set; } = "Initial value";
+
+        public string DeviceFamily = "Device Family " + AnalyticsInfo.VersionInfo.DeviceFamily;
+        public string Dimensions { get; set; } = "Initial Value";
         private double _currentWidth;
         private double _currentHeight;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public MainPage()
         {
@@ -44,7 +45,9 @@ namespace HelloUWP
             Dimensions = string.Format("Current Window Size: {0} x {1}", (int)_currentWidth, (int)_currentHeight);
 
             if (PropertyChanged != null)
+            {
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(Dimensions)));
+            }
         }
     }
 }

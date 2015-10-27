@@ -8,22 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        
-        <StackPanel Grid.Column="0" HorizontalAlignment="Left" Margin="12">
+        <StackPanel HorizontalAlignment="Left" Margin="12">
             <TextBlock Text="Page Navigation" FontWeight="Light" FontSize="24" />
             <TextBox x:Name="Message" Header="Enter a parameter to send to Page 2" Width="300" Margin="0,12,0,0" />
-            <Button Content="Go to Page 2" Click="Button_Click" Margin="0,12,0,0" />
+            <Button Content="Go to Page 2" Margin="0,12,0,0" Click="Button_Click" />
         </StackPanel>
-        
-        <Button Grid.Column="1" Style="{StaticResource NavigationBackButtonNormalStyle}" Click="GoForward" Visibility="{x:Bind CanGoForward}" VerticalAlignment="Top" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <CompositeTransform Rotation="180" />
-            </Button.RenderTransform>
-        </Button>
-        
     </Grid>
 </Page>

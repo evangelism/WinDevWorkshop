@@ -11,7 +11,7 @@
         <StackPanel>
             <TextBlock Text="Hello UWP World!" FontSize="24" FontWeight="Light" Margin="12" />
             <TextBlock Text="{x:Bind DeviceFamily}" Margin="12,0,0,0" />
-            <TextBlock Text="{x:Bind Dimensions, Mode=TwoWay}" Margin="12,0,0,0" />
+            <TextBlock Text="{x:Bind Dimensions, Mode=TwoWay}" Margin="12,0,0,0" />      
         </StackPanel>
     </Grid>
 </Page>

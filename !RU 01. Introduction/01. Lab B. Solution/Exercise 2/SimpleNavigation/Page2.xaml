@@ -9,8 +9,11 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Orientation="Horizontal">
-            <Button Style="{StaticResource NavigationBackButtonNormalStyle}" Click="GoBack" Visibility="{x:Bind CanGoBack}" VerticalAlignment="Top" />
-            <TextBlock Text="Page 2" FontWeight="Light" FontSize="24" VerticalAlignment="Top" />
+            <Button Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                    Visibility="{x:Bind CanGoBack}"
+                    VerticalAlignment="Top" Click="GoBack" />
+            <TextBlock Text="Page 2" FontWeight="Light" 
+                   FontSize="24" VerticalAlignment="Top" />
         </StackPanel>
     </Grid>
 </Page>
