@@ -12,25 +12,22 @@
 В каждом из модулей имеется презентация для проведения лабораторной работы "в классе", а также инструкция для лабораторной
 работы и готовое решение. На выполнение каждого модуля в среднем нужно около часа.
 
-Если вы решите использовать материалы в рамках учебных курсов - свяжитесь с [Дмитрием Сошниковым](http://github.com/shwars) чтобы
-уточнить детали.
+Полные инструкции по всем лабораторным работам [лежат тут](https://github.com/evangelism/WinDevWorkshop/raw/master/LabManual%20(ru).pdf), а необходимые
+для выполнения работ вспомогательные файлы - в каталоге [Lab Assets](https://github.com/evangelism/WinDevWorkshop/tree/master/Lab%20Assets).
 
-# WinDevWorkshop
-Hands on Workshop for Windows 10 Developer Training
+По завершении этого курса рекомендуем также посмотреть набор практических примеров приложений [HackSamples](http://github.com/evangelism/HackSamples),
+а для более детального ознакомления с деталями - [стандартный набор примеров для UWP](https://github.com/microsoft/windows-universal-samples) или [для IoT](https://github.com/ms-iot/samples).
 
-This workshop is based on the _full_ Windows Dev Camp set of materials, which is in turn based on the "Developer's Guide to Windows 10" which was produced as a set of on demand video training on both Channel 9 and Microsoft Virtual Academy.
+Если вы решите использовать материалы в рамках учебных курсов, или каким-то образом дорабатывать содержимое лабораторных для дальнейшего использования - свяжитесь с [Дмитрием Сошниковым](http://github.com/shwars).  
 
-The purpose of the Workshop is to provide a more interactive developer training experience that minimizes lecture in favor of more instructor led lab experiences.
+Приятного изучения!
 
-Each module contains a minimal PPT deck and one or more 'hands on labs' for direct delivery in a classroom setting.
-
-The day long agenda consists of the following modules, each 60 minutes split between PPT and Lab
-
-- [Intro to the Universal Windows Platform](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/01.%20Introduction)
-- [Adaptive UI](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/02.%20Adaptive%20UI)
-- [Live Tiles & Notifications](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/03.%20Live%20Tiles%20and%20Notifications)
-- [Edge & Web Apps](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/04.%20Edge%20and%20Web%20Apps)
-- [Cloud Enabling your App](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/05.%20Cloud%20Integration)
-- [MCP with Cortana](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/06.%20v1.%20More%20Personal%20Computing%20with%20Cortana)
-- [MPC & App Services without Cortana](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/06.%20v2.%20MPC%20%26%20App%20Services%20without%20Cortana)
-- [Store & Monetization](https://github.com/Windows-Readiness/WinDevWorkshop/tree/master/07.%20Store%20and%20Monetization)
+# Содержание курса
+- [Введение к мероприятию Windows Camp //Labs](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2000.%20Welcome)
+- [Введение в платформу универсальных приложений Windows](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2001.%20Introduction)
+- [Разработка приложений с адаптивным пользовательским интерфейсом](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2002.%20Adaptive%20UI)
+- [Живые плитки и уведомления](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2003.%20Live%20Tiles%20and%20Notifications)
+- [Edge и приложения на основе HTML/JS](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2004.%20Edge%20and%20Web%20Apps)
+- [Интеграция приложений с облаком](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2005.%20Cloud%20Integration)
+- [Более персонализированные приложения, Cortana, рукописный ввод и App Services](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2006.%20More%20Personal%20Computing)
+- [Размещение приложений в магазине и монетизация](https://github.com/evangelism/WinDevWorkshop/tree/master/!RU%2007.%20Store%20and%20Monetization)
